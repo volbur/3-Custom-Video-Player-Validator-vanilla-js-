@@ -23,3 +23,22 @@ function updatePlayIcon() {
     play.innerHTML = '<i class="fa fa-pause fa-2x"></i>';
   }
 }
+
+// Update progress & timestamp
+function updateProgress() {
+  progress.value = (video.currentTime / video.duration) * 100;
+
+  // Get the minutes
+  let mins = Math.floor(video.currentTime / 60);
+  if (mins < video.duration) {
+    mins = "0" + String(mins);
+  }
+
+  // Get Seconds
+  let secs = Math.floor(video.currentTime % 60);
+  if (secs < video.duration) {
+    secs = '0' + String(secs);
+  }
+
+  timestamp.innerHTML = `${mins}:${secs}`;
+}
