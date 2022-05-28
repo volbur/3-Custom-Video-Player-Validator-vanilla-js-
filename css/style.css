@@ -18,3 +18,11 @@ body {
 h1 {
   color: #fff;
 }
+
+.screen {
+    cursor: pointer;
+    width: 60%;
+    background-color: #000 !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
