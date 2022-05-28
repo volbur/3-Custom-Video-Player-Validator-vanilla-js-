@@ -47,3 +47,9 @@ function updateProgress() {
 function setVideoProgress() {
   video.currentTime = (+progress.value * video.duration) / 100;
 }
+
+// Stop video
+function stopVideo() {
+  video.currentTime = 0;
+  video.pause();
+}
